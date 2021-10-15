@@ -1,0 +1,1 @@
+SELECT usename,valuntil FROM pg_user;
