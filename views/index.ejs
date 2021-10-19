@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Blue Filmes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script defer src="/img/logo.png" integrity= "anonymous"></script>
+
+</head>
+<body>
+
+   
+    <header id= home>
+      <div id=logotipo><center>
+        <a id="logo" href="/"><img src="/img/logo.png" alt="Logo Image"></a></center>
+      </div>      
+            <nav class="main-nav">  
+        <a href="/">Home</a>              
+        <a href="/criar">Cadastrar</a>
+        
+             
+      </nav>
+      
+    </header>
+  
+  
+    <section id="filmes">
+      <% filmes.forEach((item, index) => { %>
+          <a class= "card" href="/detalhes/<%= item.id %>">
+          <h2>
+              <%= item.nome %>
+          </h2>
+          <img src='<%= item.imagem %>'>
+          
+          <h3>
+              <%= item.detalhes %>
+          </h3>
+      <% }) %>
+      
+          </a>
+   </section>
+ 
+    
+<footer >
+  <p>&copy 2021 Blue Filmes, Inc.</p>
+  <p>Thiago Nascimento Lino & Maria Clara Nascimento &copy 2021</p>
+</footer>
+
+  
+  <script  src="/public/js/script.js"></script>
+</body>
+</html>
+
